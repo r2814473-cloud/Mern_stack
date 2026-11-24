@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("hello world")
+        console.log("welcome to javascript");
+
+
+
+        //keywords and variables
+        //var, let, const
+
+        //var age; Declaration of variable
+        //age = 20; Initialization of variable
+
+        var age=20;
+        age = 30; //re-initialization of variable
+        console.log(age);
+
+        var age=40; //re-declaration of variable
+        console.log("age: " ,age);
+
+        //let
+        let name = "John"; //Declaration and initialization of variable
+        name = "Doe"; //re-initialization of variable
+        // let name = "Smith"; //re-declaration of variable (will throw an error)(is not possible to re-declare a variable using let)
+        console.log("name: ", name);
+
+        //const
+        const PI = 3.14; //Declaration and initialization of variable
+        // PI = 3.14159; //re-initialization of variable (will throw an error)(is not possible to re-initialize a variable using const)
+        // const PI = 3.14159; //re-declaration of variable (will throw an error)(is not possible to re-declare a variable using const)
+        console.log("PI: ", PI);
+
+        let username = "Alice";
+        let password = "password123";
+         if (username === "Alice" && password === "password123") {
+            console.log("Login successful");
+        } else {
+            console.log("Login failed");
+        }
+
+        let number = 10;
+        let result = (number % 2 === 0) ? "Even" : "Odd";
+        if(result ===Even && number ===10){
+            console.log("The number is even and equal to 10");
+        } else {
+            console.log("The number is odd or not equal to 10");
+        }
+
+
+        function greet(name,clg="sece") {
+            console.log("Hello, " + name + "!"+clg);
+        }
+
+        greet("Alice");
+        greet("Bob");
+        greet("Charlie");
+        greet("David");
+        greet("Eve");
+        
+     
+     function employee(empname,empdept,empclg="mit"){
+        console.log("Employee Name: " + empname + ", Department: " + empdept + ", College: " + empclg);
+     }
+     employee("John", "IT", "MIT");
+     employee("Alice", "HR");
+     employee("Bob", "Finance");
+
+
+    </script>
+    
+</body>
+</html>
