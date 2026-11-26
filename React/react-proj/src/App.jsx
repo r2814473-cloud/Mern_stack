@@ -4,6 +4,11 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
 import Home from './home'
+import Counter from './Hooks/useState/Counter'
+import Score from './Hooks/useState/Score'
+import Flipkart from './Components/Flipkart'
+import { MobileContext } from './Components/MobileContext'
+import User from './Hooks/UseEffect/User'
 function Complex(data)
 {
   // console.log(data)
@@ -14,7 +19,7 @@ function Complex(data)
     <>
     <h2>List Of ComplexData</h2>
     <h2>First Player: {data.obj2[0].name}</h2>
-    <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', margin: '15px 0' }}>
+    <div style={{ display: 'flex', gap: '15px', flexWrap: 'wrap', margin: '15px 0' ,alignSelf:'center'}}>
       {
         data.obj2.map((Complx, index) => {
           return (
@@ -24,7 +29,7 @@ function Complex(data)
                 border: '1px solid #ddd',
                 borderRadius: '10px',
                 padding: '15px 25px',
-                backgroundColor: '#f5f5f5',
+                backgroundColor: '#7663c5',
                 color: '#222',
                 boxShadow: '0 4px 8px rgba(0,0,0,0.1)',
                 minWidth: '160px'
@@ -69,6 +74,7 @@ function Data(prop)
 }
 function App()
 {
+  const mobiles="Iphone 19 pro max";
   let players_data={
     id:100,
     name:'kohli',
@@ -99,9 +105,27 @@ function App()
     {/* only we can modify data in parent  */}
     <Players obj1={players_data}/>
     <Complex obj2={complex_data}/>
-    </>
-  )
+    <Counter />
+    <Score />
+    {/* <Flipkart mobile={mobiles}/> Deconstructing method*/}
+   
+    <MobileContext.Provider value={mobiles}>
+      <Flipkart/>
+    </MobileContext.Provider>
+     <User/>
+   </>
+   )
 }
 
 
 export default App
+
+
+// only using the callback function to we pass data from child to parent
+
+
+//  to avoid the prop drilling we need to use the usecontexthook
+//     ( prop Drilling 
+//     use context) instead of pass the data from parent to last child by passing the data for all the intermediate child class to last child,we can pass the data directly from parent to last child using prop drilling concept
+    
+

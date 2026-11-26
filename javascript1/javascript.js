@@ -299,3 +299,8 @@
       // react js is for frontend development and node js is for backened development
       
       
+
+      // this keyword refers to the current object
+      //super keyword is a reference variable used inside a subclass to refer directly to its immediate parent class (superclass).
+      //dom-document object model
+      //real dom- refresh particular component instead refreshing the entire page
