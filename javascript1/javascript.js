@@ -304,3 +304,4 @@
       //super keyword is a reference variable used inside a subclass to refer directly to its immediate parent class (superclass).
       //dom-document object model
       //real dom- refresh particular component instead refreshing the entire page
+      //usestate is used to update content without refreshing the page

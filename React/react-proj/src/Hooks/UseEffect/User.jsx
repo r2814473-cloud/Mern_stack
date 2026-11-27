@@ -15,24 +15,24 @@ function User() {
   return (
     <>
       <h2>Display User</h2>
-      <table border={2}>
+      <table className="border-collapse border border-black">
         <thead>
             <tr>
-            <th>Id</th>
-            <th>Name</th>
-            <th>Username</th>
-            <th>email</th>
-            <th>website</th>
+            <th className="border border-black px-2 py-1">Id</th>
+            <th className="border border-black px-2 py-1">Name</th>
+            <th className="border border-black px-2 py-1">Username</th>
+            <th className="border border-black px-2 py-1">email</th>
+            <th className="border border-black px-2 py-1">website</th>
             </tr>
         </thead>
         <tbody>
           {users.map(user => (
             <tr key={user.id}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.username}</td>
-              <td>{user.email}</td>
-              <td>{user.website}</td>
+              <td className="border border-black px-2 py-1">{user.id}</td>
+              <td className="border border-black px-2 py-1">{user.name}</td>
+              <td className="border border-black px-2 py-1">{user.username}</td>
+              <td className="border border-black px-2 py-1">{user.email}</td>
+              <td className="border border-black px-2 py-1">{user.website}</td>
             </tr>
           ))}
         </tbody>

@@ -3,12 +3,19 @@ import heroImg from './assets/hero.png'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import './App.css'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './home'
+import Home1 from './Pages/Home1'
 import Counter from './Hooks/useState/Counter'
 import Score from './Hooks/useState/Score'
 import Flipkart from './Components/Flipkart'
 import { MobileContext } from './Components/MobileContext'
 import User from './Hooks/UseEffect/User'
+import Fetch_api from './Components/Fetch_api'
+import Registration from './Components/Registration'
+import Navbar from './Components/Navbar'
+import About from './Pages/About'
+import Contact from './Pages/Contact'
 function Complex(data)
 {
   // console.log(data)
@@ -113,6 +120,15 @@ function App()
       <Flipkart/>
     </MobileContext.Provider>
      <User/>
+      <Fetch_api/>
+      <Registration/>
+      <BrowserRouter>
+      <Navbar/>
+      <Routes>
+        <Route path='/home' element={<Home1/>}/>
+        <Route path='/about' element={<About/>}/>
+        <Route path='/contact' element={<Contact/>}/>
+        </Routes></BrowserRouter>
    </>
    )
 }
